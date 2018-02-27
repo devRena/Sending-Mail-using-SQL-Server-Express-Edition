@@ -1,4 +1,4 @@
-#Sending Mail using SQL Server Express Edition
+# Sending Mail using SQL Server Express Edition
 
 In SQL server standard and enterprise edition,A DataBase mail functionality in built to sent mail.
 But in SQL Server express edition,You need either use CLR integration or configure SQL Mail using 
@@ -6,7 +6,7 @@ MSDB system database.
 Here I am discussing sending mail using MSDB system database.By default the MSDB database installed 
 when you install SQL Server.
 
-##Database Mail Setup:
+## Database Mail Setup:
 
 To configure SQL mail we need to follow below steps.
 
@@ -15,7 +15,7 @@ To configure SQL mail we need to follow below steps.
 * Add database Mail account to profile
 * Grants permission for a database user or role to use a Database Mail profile.
 
-###Setting up Accounts & Profiles for DB Mail:
+### Setting up Accounts & Profiles for DB Mail:
 
 ``` --// Create a Database Mail account
 	EXECUTE msdb.dbo.sysmail_add_account_sp
@@ -47,12 +47,12 @@ To configure SQL mail we need to follow below steps.
 		@principal_name = 'public',
 		@is_default = 1 ```
 	
-###Execute the following Stored-Porcs
+### Execute the following Stored-Porcs
 
 ```exec dbo.sysmail_start_sp
 	exec dbo.sysmail_stop_sp```
 	
-###To Enable Database Mail execute the following block of code:
+### To Enable Database Mail execute the following block of code:
 ``` use master
 	go
 	exec sp_configure 'show advanced options', 1
