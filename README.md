@@ -50,7 +50,7 @@ To configure SQL mail we need to follow below steps.
 	
 ### Execute the following Stored-Porcs
 
-```exec dbo.sysmail_start_sp
+``` exec dbo.sysmail_start_sp
    exec dbo.sysmail_stop_sp 
 ```
 	
