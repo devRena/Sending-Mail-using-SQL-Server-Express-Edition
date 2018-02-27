@@ -51,7 +51,7 @@ To configure SQL mail we need to follow below steps.
 ### Execute the following Stored-Porcs
 
 ``` exec dbo.sysmail_start_sp
-   exec dbo.sysmail_stop_sp 
+exec dbo.sysmail_stop_sp 
 ```
 	
 ### To Enable Database Mail execute the following block of code:
