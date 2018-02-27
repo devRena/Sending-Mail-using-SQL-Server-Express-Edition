@@ -45,12 +45,14 @@ To configure SQL mail we need to follow below steps.
 	EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 		@profile_name = 'Test Mail Profile',
 		@principal_name = 'public',
-		@is_default = 1  ```
+		@is_default = 1  
+```
 	
 ### Execute the following Stored-Porcs
 
 ```exec dbo.sysmail_start_sp
-	exec dbo.sysmail_stop_sp```
+	exec dbo.sysmail_stop_sp 
+```
 	
 ### To Enable Database Mail execute the following block of code:
 ``` use master
