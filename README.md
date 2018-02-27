@@ -60,10 +60,11 @@ To configure SQL mail we need to follow below steps.
 	exec sp_configure 'show advanced options', 1
 	reconfigure
 	exec sp_configure 'Database Mail XPs', 1
-	reconfigure ```
+	reconfigure 
+```
 	
 ## Important Tables used in configuring Database mail and check their status:
-``` --Profiles
+```  --Profiles
 	SELECT * FROM msdb.dbo.sysmail_profile
  
 	--Accounts
@@ -99,12 +100,13 @@ To configure SQL mail we need to follow below steps.
 	EXEC msdb.dbo.sysmail_help_queue_sp
 	 
 	--DB Mail Status
-	EXEC msdb.dbo.sysmail_help_status_sp```
+	EXEC msdb.dbo.sysmail_help_status_sp 
+```
 	
 	
 ## Ready to send an email
 
-``` --Send mail
+```  --Send mail
 	EXEC msdb.dbo.sp_send_dbmail
 	@recipients='abc@xyz.gr',
 	@body= 'Test Email Body',
@@ -126,4 +128,5 @@ To configure SQL mail we need to follow below steps.
 	,@query_result_no_padding= 1
 	,@exclude_query_output =1
 	,@append_query_error = 0
-	,@query_result_header =1;```
+	,@query_result_header =1;
+```
